@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.frankie.programmer.dao.admin.UserDAO">
+	<!-- 根据用户名查找用户 -->
+	<select id="findByUsername" parameterType="String" resultType="User"> <!-- id:对应服务实现的方法，parametertype为传入参数类型，result为输出数据类型 -->
+		select * from user where username = #{username}   <!-- 括号（取变量）里的参数对应服务层实现里的参数 -->
+	</select>
+	
+</mapper>
